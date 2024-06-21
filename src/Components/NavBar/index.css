@@ -1,0 +1,63 @@
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(169, 167, 167, 0.792);
+  background-color: white;
+
+}
+.navbar-nav ul {
+    margin: .4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar-nav ul li {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgb(6, 178, 158);
+  line-height: 3rem;
+  padding-right: .3rem;
+}
+.navbar-nav ul li div {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-nav .navbar-right-sec {
+  padding-inline-end: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar-nav .navbar-right-sec .nav-logo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 26px;
+}
+.navbar-nav .navbar-right-sec .nav-logo span {
+  color: rgb(106, 102, 102);
+}
+.navbar-nav .navbar-right-sec .nav-profile {
+  border: 1px solid rgb(6, 178, 158);
+  padding-block: 0.4rem;
+  padding-inline: 1.7rem;
+  border-radius: 0.4rem;
+}
+.navbar-nav .navbar-right-sec .nav-profile .profile-name {
+  color: rgb(6, 178, 158);
+}
+
+
+.custom-tabs .ant-tabs-nav::before {
+  border-bottom: none !important;
+}
+
+.tab-item {
+  text-align: center;
+  font-size: 12px;
+  color: #139696;
+  padding-right: 1.4rem;
+  border-right: 2px solid #C1C9D2;
+
+  
+}

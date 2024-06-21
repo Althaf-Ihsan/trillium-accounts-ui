@@ -1,0 +1,77 @@
+.claim-status-box {
+  /* border: 1px solid #000000; */
+  width: 68px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 13px;
+  padding-left: 2px;
+  border-radius: 0.2rem;
+  font-weight: 500;
+  box-shadow: 0 0 2px  0 ;
+}
+.claim-status-box span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.claim-status-open {
+  border: 1px solid #139696;
+  color: #139696;
+}
+.claim-status-priority {
+  border: 1px solid #e39600;
+  color: #e39600;
+}
+.claim-status-overdue {
+  border: 1px solid #f07036;
+  color: #f07036;
+}
+
+.custom-checkbox {
+  accent-color: #d9d9d9; /* Default color */
+}
+
+.custom-checkbox:checked {
+  accent-color: #139696 /* Color when checked */
+}
+
+.model-header-title{
+  font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+line-height: 38.73px;
+text-align: left;
+color: #109590;
+}
+
+.modal-grid{
+  padding: 2rem 1rem;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem; 
+    width:100%;
+}
+/* .modal-grid-buttons::placeholder{
+color: #5E5858;
+font-family: Inter;
+font-size: 18px;
+font-weight: 200;
+
+}
+.custom-datepicker .ant-picker-input input::placeholder {
+  color: #5E5858;
+font-family: Inter;
+font-size: 18px;
+font-weight: 200;
+} */
+.custom-datepicker {
+  width: 100%; /* Full width if needed */
+}
+
+.custom-datepicker .ant-picker {
+  height: 50px; /* Increase height */
+  font-size: 18px; /* Increase font size */
+}

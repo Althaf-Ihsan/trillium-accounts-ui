@@ -1,0 +1,12 @@
+.firstRow-sideBar{
+    border-bottom: 1px solid #C1C9D2;
+    width: 100%;
+}
+
+.collapsedSidebar .firstRow-sideBar {
+  justify-content: center;
+}
+
+.collapsedSidebar .sideBarContent {
+  display: none;
+}

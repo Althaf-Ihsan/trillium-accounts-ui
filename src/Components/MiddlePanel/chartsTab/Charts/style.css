@@ -1,0 +1,34 @@
+.widget_input .ant-input.ant-input-borderless {
+    padding: 0;
+  }
+  
+  .edit_input {
+    width: 85%;
+  }
+  .desc-buttons .ant-btn {
+    border:none;
+    border-radius: 0px;
+    border-bottom: 1px solid #139696 ;
+  }
+
+   .custom-table {
+    width: 100%;
+    border:1px solid #D7E0E9;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* margin: 0px -15px; */
+    /* border: 1px solid ; */
+  }
+  
+  .custom-table .ant-table-thead > tr > th {
+    padding: 8px; 
+
+  }
+  
+  .custom-table .ant-table-tbody > tr > td {
+    padding: 8px; 
+  }
+  
+  .custom-table .ant-table-thead > tr > th {
+    background-color: white;
+  } 

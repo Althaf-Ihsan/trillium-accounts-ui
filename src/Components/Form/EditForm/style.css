@@ -1,0 +1,42 @@
+.model-header-title {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38.73px;
+    text-align: left;
+    color: #109590;
+  }
+  
+  .modal-grid {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .form-header {
+    display: flex;
+    gap: 18px;
+    padding-top: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  

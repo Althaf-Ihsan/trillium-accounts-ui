@@ -1,0 +1,8 @@
+.ant-layout-header{
+    background: none;
+}
+
+.custom-tabs .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+    border: none !important;
+  }
+  

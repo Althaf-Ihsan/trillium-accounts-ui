@@ -1,0 +1,61 @@
+.notes-list {
+  overflow-y: scroll;
+  height: "600px";
+}
+.notes-list::-webkit-scrollbar-thumb {
+  background: #a3acb9;
+  border-radius: 10px 20px 10px 10px;
+}
+.notes-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px 20px 10px 10px;
+}
+.notes-list::-webkit-scrollbar {
+    width: 0px; /* Width of the scrollbar */
+
+}
+.notes-heading {
+  font-size: 16px;
+  color: #109590;
+  font-weight: 600;
+  
+}
+.notes-add-sec {
+  display: flex;
+  padding-inline: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  border: 1.7px solid #d7e0e9;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 1px 0px #d7e0e9;
+}
+
+.notes-add-sec textarea {
+  width: 100%;
+  /* font-family: inherit; */
+  border: none;
+  resize: none;
+  font-size: large;
+}
+.notes-add-sec textarea:focus {
+  outline: none;
+}
+.send-icon-container {
+  /* border: 1px solid #D7E0E9 ; */
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  border-radius: 100%;
+  /* padding: rem; */
+  background-color: #109590;
+  cursor: pointer;
+}
+.sendIcon {
+  padding: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin-left: 0.2rem;
+  align-self: center;
+  color: #d7e0e9;
+  rotate: -29deg;
+}

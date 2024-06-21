@@ -1,0 +1,41 @@
+
+.ant-tabs-card .ant-tabs-tab {
+  background-color: transparent !important; 
+  border-color: transparent !important;     
+}
+
+
+.ant-tabs-card .ant-tabs-tab-active {
+  background-color: white !important;      
+  border-color: white !important;   
+        
+}
+
+
+.ant-tabs-card .ant-tabs-tab {
+  transition: background-color 0.3s;      
+}
+
+.ant-tabs-card .ant-tabs-content {
+  background-color: #f0f0f0; 
+}
+
+.ant-tabs-card .ant-tabs-tabpane {
+  background-color: white; 
+  padding: 16px;
+}
+
+.ant-tabs-card .ant-tabs-content-holder {
+  margin-top: -16px;
+}
+
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    padding: 16px;
+    height: 70vh;
+    overflow-y: auto;
+
+  }
+  

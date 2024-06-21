@@ -1,0 +1,20 @@
+.files-heading {
+    font-size: 16px;
+    color: #109590;
+    font-weight: 600;margin-bottom:1rem ;
+  }
+  
+  .files-container{
+      height: 70vh ;
+  }
+  .upload-list-inline .upload-btn{
+  display: flex;
+  align-items: center;
+  margin-block: 1rem;
+  }
+  .upload-list-inline .ant-upload-list-item {
+    float: left;
+    width: 200px;
+    margin-inline-end: 8px;
+  }
+  

@@ -1,0 +1,193 @@
+.clinicLogin {
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  background: #fff;
+}
+
+.clinicLogin__header {
+  min-height: 80px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--Grey5);
+}
+
+.clinicLogin__header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 90%;
+}
+
+.clinicLogin__header__logo {
+  width: 215px;
+}
+
+.clinicLogin__header__bar ul {
+  display: inline-flex;
+  gap: 2rem;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #5f6368;
+  list-style-type: none;
+}
+.clinicLogin__header__bar ul li a {
+  color: #5f6368;
+  text-decoration: none;
+}
+.clinicLogin__header__bar ul li a:hover {
+  color: #2b2b2c;
+}
+
+.clinicLogin__main {
+  margin: 0 72px;
+}
+
+.clinicLogin__main {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.clinicLogin__section {
+  margin-top: 60px;
+}
+
+.clinicLogin__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  place-items: center;
+}
+
+.clinicLogin__grid__col--form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clinicLogin__grid__heading {
+  font-size: 42px;
+  letter-spacing: -0.5px;
+  line-height: 56px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #1a1f36;
+}
+
+.clinicLogin__grid__subheading {
+  font-size: 20px;
+  letter-spacing: initial;
+  line-height: 28px;
+  color: #6a6e74;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #697386;
+}
+
+.clinicLogin__heroImg {
+  max-width: 100%;
+  position: relative;
+  left: -60px;
+}
+
+.clinicLogin__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.clinicLogin__inputField {
+  min-width: 350px !important;
+  
+}
+.clinicLogin__editableInputField {
+  position: relative;
+}
+
+.clinicLogin__editBtn--wrapper {
+  height: 100%;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clinicLogin__submitBtn {
+  min-width: 312px !important;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  height: 48px;
+  padding: 10px 13px;
+  font-size: 16px;
+  min-width: 310px;
+  background: #088b8c;
+  min-height: 30px;
+  transition: 0.3s ease all;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: none !important;
+  margin-top: 1rem;
+}
+
+.clinicLogin__submitBtn:hover {
+  background: #10a8a9;
+}
+
+@media (max-width: 1440px) {
+  .clinicLogin__main {
+    max-width: 1240px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .clinicLogin__main {
+    max-width: 800px;
+  }
+  .clinicLogin__heroImg {
+    left: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clinicLogin__grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .clinicLogin__grid__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .clinicLogin__section {
+    margin: 40px 72px;
+  }
+  .clinicLogin__header__bar ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .clinicLogin__header__bar {
+    flex-direction: column;
+    padding: 1rem 0rem;
+  }
+  .clinicLogin__section {
+    margin: 20px;
+  }
+}
+
+.MuiFormHelperText-contained {
+  margin-left: 0px !important;
+  max-width: 304px!important;
+}
