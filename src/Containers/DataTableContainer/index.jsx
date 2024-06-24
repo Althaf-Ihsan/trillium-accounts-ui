@@ -26,7 +26,6 @@ import AddForm from "../../Components/Form";
 function DataTableContainer() {
   const dispatch = useDispatch();
   const { Search } = Input;
-  const { patientDetail } = useSelector((state) => state.account);
   const [open, setOpen] = useState(false);
   const [openAdd, setOpenAdd] = useState(false);
   const [limit, setLimit] = useState(20);
@@ -34,6 +33,7 @@ function DataTableContainer() {
   const start = (currentPage - 1) * limit;
   const { patientList } = useSelector((state) => state.account);
   const [options, setOptions] = useState([]);
+  const [searchData, setSearchData] = useState();
   const [filterData, setFilterData] = useState({
     firstName: "",
     lastName: "",
@@ -66,18 +66,18 @@ function DataTableContainer() {
   };
   const handleInputValue = (e) => {
     const { title, value } = e.target;
-       setFilterData((prev) => ({ ...prev, [title]: value }));
+    setFilterData((prev) => ({ ...prev, [title]: value }));
   };
 
   const handleDateValue = (dateString, title) => {
     if (dateString) {
       const formattedDate = dateString.format("YYYY-MM-DD");
-        setFilterData((prev) => ({ ...prev, [title]: formattedDate }));
+      setFilterData((prev) => ({ ...prev, [title]: formattedDate }));
     }
   };
 
   const handleSelectValue = (value, title) => {
-       setFilterData((prev) => ({ ...prev, [title]: value }));
+    setFilterData((prev) => ({ ...prev, [title]: value }));
   };
   const handlePopSearch = () => {
     dispatch(
@@ -185,7 +185,13 @@ function DataTableContainer() {
         ]}
       />
 
-      <Button ghost className="rounded-md" type="primary" size="medium" onChange={handleOpenChange}>
+      <Button
+        ghost
+        className="rounded-md"
+        type="primary"
+        size="medium"
+        onChange={handleOpenChange}
+      >
         Clear
       </Button>
       <Button
@@ -235,21 +241,23 @@ function DataTableContainer() {
     },
   ];
   const handleSearch = (value) => {
-    console.log(value, "valie");
-    dispatch(fetchByName(value));
+    if (value) {
+      dispatch(fetchByName(value));
+    }
   };
+
   useEffect(() => {
-    if (patientDetail?.data?.results) {
-      const newOptions = patientDetail.data.results.map((item, index) => ({
+    if (patientList?.data?.results) {
+      const newOptions = patientList.data.results.map((item, index) => ({
         label: `${item.firstName} ${item.lastName}`,
         value: `${item.firstName} ${item.lastName}`,
         key: `${item.firstName} ${item.lastName}-${index}`,
       }));
       setOptions(newOptions);
     }
-  }, [patientDetail]);
-console.log(filterData,"filterData")
-  useEffect(() => {}, [patientList]);
+  }, [patientList]);
+  console.log(filterData, "filterData");
+
   return (
     <div>
       <Modal
@@ -260,7 +268,8 @@ console.log(filterData,"filterData")
         width={700}
         footer={null}
         closable={false}
-      ><AddForm closeAdd={closeAdd}/>
+      >
+        <AddForm closeAdd={closeAdd} />
       </Modal>
       <MainHeader />
       {/* Claims middle section start */}
@@ -280,7 +289,7 @@ console.log(filterData,"filterData")
             defaultPageSize={limit}
             showQuickJumper
             showSizeChanger
-            pageSizeOptions={["100", "200", "300", "500","1000"]}
+            pageSizeOptions={["100", "200", "300", "500", "1000"]}
             onChange={handlePageChange}
             onShowSizeChange={handlePageChange}
           />
