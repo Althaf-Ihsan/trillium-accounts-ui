@@ -5,6 +5,7 @@ import ChargesTab from './chargesTab';
 import PatientPayment from '../PatientPayment';
 import PaymentTab from './PaymentTab';
 import PatientCharts from './chartsTab/Charts/Index';
+import ChartsTab from './chartsTab';
 const onChange = (key) => {
   console.log(key);
 };
@@ -28,7 +29,7 @@ const items=[
     key:"3",
      label: (<div style={{fontSize:"16px",fontWeight:"500",borderRadius:"20px"}}>{`Charts`}</div>),
      children: <div className="tab-content scrollbarY--custom">
-    <ChargesTab/>
+    <ChartsTab/>
      </div>,
   },
   // {

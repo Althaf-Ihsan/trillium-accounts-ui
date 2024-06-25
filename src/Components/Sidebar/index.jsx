@@ -155,8 +155,7 @@ const SideBar = () => {
             }}
           >
             <span style={{ fontSize: "14px", fontWeight: "700", color: "#8792A2" }}>
-              {item.firstName} {item.lastName} ({formatDate(item.ldos)})
-            </span>
+              {item.firstName} {item.lastName} {item.ldos ? <span>({formatDate(item.ldos)})</span> : null}         </span>
             <a href="#">Edit</a>
           </div>
           <div

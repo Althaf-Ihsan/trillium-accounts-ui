@@ -121,7 +121,7 @@ const AccountsTable = ({ start, limit }) => {
     {
       title: "Insurance",
       dataIndex: "Insurance",
-      render: (text) => <span className="table-item">{text}</span>,
+      render: (text) => <span className="table-item">{text?truncateText(text,14):null}</span>,
     },
     {
       title: "Provider",
@@ -186,6 +186,7 @@ const AccountsTable = ({ start, limit }) => {
       })
     );
   };
+
   useEffect(() => {
     fetchData();
   }, [ limit, start]);
@@ -203,14 +204,17 @@ const AccountsTable = ({ start, limit }) => {
             Active: item.active,
             DOS: item.ldos,
             Facility: item.facilityName || "",
-            Insurance: "Medicare",
+            Insurance: item.payorName,
             Provider: item.providerName || "",
             insBal: `$${item.insuranceBalance}`,
             PatBal: `$0`,
             id: item.id,
           }))
         );
+      }else{
+        setData([])
       }
+      
     },
     [patientList,start,limit]
 

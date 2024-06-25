@@ -1,7 +1,7 @@
 import React from 'react'
 import PatientCharts from './Charts/Index'
 
-const chartsTab = () => {
+const ChartsTab = () => {
   return (
     <div>
       <PatientCharts/>
@@ -11,4 +11,4 @@ const chartsTab = () => {
   )
 }
 
-export default chartsTab
+export default ChartsTab

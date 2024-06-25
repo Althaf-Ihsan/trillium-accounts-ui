@@ -19,7 +19,7 @@ const EditForm = ({ closeAdd, selectedPatient }) => {
     const year = d.getFullYear();
     return `${year}-${month}-${day}`;
   };
-  const patient = useSelector(selectPatientById(selectedPatient));
+  const patient = useSelector((state) => selectPatientById(selectedPatient)(state))
   console.log(patient);
   const formik = useFormik({
     initialValues: {
